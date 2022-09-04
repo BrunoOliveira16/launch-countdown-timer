@@ -8,6 +8,8 @@ Projeto de desafio do frontend mentor para construção de um cronômetro de con
 - Designer 01
 ![Screenshot](./assets/images/designer-01.jpg)
 
+<h4 align="center"><a href="https://brunooliveira16.github.io/launch-countdown-timer/">Clique aqui e visite o projeto</a></h4>
+
 ## 📚 Descrição
 
 Construir um cronômetro de contagem regressiva e fazê-lo parecer o mais próximo possível do design do desafio.
