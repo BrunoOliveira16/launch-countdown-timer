@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+    max-width: 1440px;
+    margin: 0 auto 0 auto;
+}
+
+body {
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Red Hat Text', sans-serif;
+}
+
+/* CSS Header*/
+.container {
+    height: 100%;
+    background: hsl(0, 15%, 6%);
+    background-image: url(../images/bg-stars.svg);
+}
+
+header {
+    height: 30vh;
+    color: hsl(0, 0%, 100%);
+    Font-size: 0.8rem;
+    letter-spacing: 0.4rem;
+    text-align: center;
+    padding-top: 70px;
+}
+
+/* CSS Main*/
+main {
+    margin-bottom: 80px;
+}
+
+.container-01 {
+    display: flex;
+    width: 70%;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: hsl(237, 18%, 59%);
+    font-size: 0.9rem;
+    letter-spacing: 0.3rem;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.card {
+    width: 150px;
+    height: 130px;
+    background: hsla(0, 0%, 4%, 0.6);
+    border-radius: 8px;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.card-top {
+    width: 100%;
+    font-size: 6rem;
+    font-weight: 700;
+    color: hsl(345, 95%, 68%);
+}
+
+/* CSS Footer */
+.icones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    background: url(../images/pattern-hills.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.icones img {
+    width: 30px;
+    height: 30px;
+    margin: 0 20px 0 20px;
+}
