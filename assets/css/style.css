@@ -35,7 +35,7 @@ main {
 
 .container-01 {
     display: flex;
-    width: 70%;
+    width: 50%;
 }
 
 .box {
@@ -49,7 +49,7 @@ main {
     text-align: center;
 }
 
-.card {
+.cards {
     width: 150px;
     height: 130px;
     background: hsla(0, 0%, 4%, 0.6);
@@ -59,7 +59,7 @@ main {
     align-items: center;
 }
 
-.card-top {
+.card {
     width: 100%;
     font-size: 6rem;
     font-weight: 700;
@@ -67,7 +67,7 @@ main {
 }
 
 /* CSS Footer */
-.icones {
+.icons {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -77,7 +77,7 @@ main {
     background-size: cover;
 }
 
-.icones img {
+.icons img {
     width: 30px;
     height: 30px;
     margin: 0 20px 0 20px;
