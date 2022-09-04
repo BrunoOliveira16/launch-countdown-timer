@@ -1,10 +1,13 @@
 * {
     box-sizing: border-box;
-    max-width: 1440px;
-    margin: 0 auto 0 auto;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
 }
 
 body {
+    display: flex;
+    justify-content: center;
     background-color: black;
     width: 100%;
     height: 100vh;
@@ -12,30 +15,39 @@ body {
     font-family: 'Red Hat Text', sans-serif;
 }
 
-/* CSS Header*/
+header, main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .container {
+    width: 90%;
     height: 100%;
     background: hsl(0, 15%, 6%);
     background-image: url(../images/bg-stars.svg);
+    min-width: 260px;
+    min-height: 350px;
+    position: relative;
 }
 
+/* CSS Header*/
 header {
-    height: 30vh;
+    height: 35vh;
     color: hsl(0, 0%, 100%);
-    Font-size: 0.8rem;
+    Font-size: 0.6rem;
     letter-spacing: 0.4rem;
-    text-align: center;
-    padding-top: 70px;
+    font-weight: 700;
+    text-shadow: 1px 0 hsla(0, 0%, 100%, 0.15);
 }
 
 /* CSS Main*/
 main {
-    margin-bottom: 80px;
+    width: 100%;
 }
 
 .container-01 {
     display: flex;
-    width: 50%;
 }
 
 .box {
@@ -43,42 +55,137 @@ main {
     flex-direction: column;
     align-items: center;
     color: hsl(237, 18%, 59%);
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     letter-spacing: 0.3rem;
     text-shadow: 1px 1px rgba(0, 0, 0, 0.15);
-    text-align: center;
 }
 
 .cards {
-    width: 150px;
-    height: 130px;
-    background: hsla(0, 0%, 4%, 0.6);
+    background: hsl(240, 11%, 23%);
     border-radius: 8px;
-    margin: 20px;
+    width: 140px;
+    height: 145px;
+    margin: 15px;
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 
 .card {
-    width: 100%;
-    font-size: 6rem;
+    display: flex;
+    justify-content: center;
+    font-size: 4rem;
     font-weight: 700;
     color: hsl(345, 95%, 68%);
 }
 
+.cards::after, .cards::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(48%, 50%);
+    background: hsl(0, 0%, 4%);
+    height: 9px;
+    width: 10px;
+    border-radius: 50%;
+    z-index: 20;
+}
+.cards::before {
+    right: unset;
+    left: 0;
+    transform: translate(-48%, 50%);
+}
+
 /* CSS Footer */
+
+footer {
+    position: absolute;
+    width: 100%;
+    height: 25vh;
+    bottom: 0;
+    background: url(../images/pattern-hills.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .icons {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 300px;
-    background: url(../images/pattern-hills.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    width: 100%;
+    height: 100%;
+
 }
 
 .icons img {
     width: 30px;
     height: 30px;
     margin: 0 20px 0 20px;
+}
+
+.icons img:hover {
+    filter: brightness(2);
+}
+
+.attribution {
+    position: absolute;
+    bottom: 0;
+    color: white;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+}
+.attribution a {
+   color: hsl(152, 69%, 47%);
+   text-decoration: none;
+}
+.attribution a:hover {
+    color: hsl(152, 85%, 19%);
+}
+.attribution p {
+    padding: 0 15px;
+}
+
+/* responsividade */
+@media only screen and (max-width: 1300px) {
+    .container {
+        width: 100%;
+    }
+
+    .cards {
+        width: 120px;
+        height: 120px;
+        margin: 15px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    html {
+        font-size: 75%;
+    }
+    .cards {
+        width: 80px;
+        height: 84px;
+        margin: 8px;
+    }
+    .icons img {
+        width: 2rem;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    html {
+        font-size: 50%;
+    }
+    .cards {
+        width: 60px;
+        height: 63px;
+        margin: 2px;
+    }
 }

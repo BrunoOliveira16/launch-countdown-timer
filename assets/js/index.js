@@ -1,58 +1,19 @@
-const daysCard = document.getElementById('days');
-const hoursCard = document.getElementById('hours');
-const minutesCard = document.getElementById('minutes');
-const secondsCard = document.getElementById('seconds');
-let time = {'days': 30, 'hours': 0, 'minutes': 0, 'seconds': 0}, finished = false;
+const countDate = new Date("sep 30, 2022 12:09:35").getTime();
 
-let count = setInterval(() =>{
-    
-    updateScreenTime();
-    updateTime()
+let x = setInterval(()=> {
 
-    if(finished) clearInterval(count);
-},1000);
+    const today = new Date().getTime();
 
-// Função de contagem
-function updateTime(){
+    let distance = countDate - today;
 
-    if(time.seconds > 0)time.seconds--
-    else{
-        time.seconds = 59;
-        if(time.minutes > 0)time.minutes--
-        else{
-            time.minutes = 59;
-            if(time.hours > 0)time.hours--
-            else{
-                time.hours = 23;
-                if(time.days > 0)time.days--
-                else finished = true;
-            }
-        }
-    }
-};
+    let days = Math.floor(distance / (1000*60*60*24));
+    let hours = Math.floor((distance % (1000*60*60*24))/(1000*60*60));
+    let minutes = Math.floor((distance % (1000*60*60))/(1000*60));
+    let seconds = Math.floor((distance % (1000*60))/(1000));
 
-// Função para atualizar o tempo na tela
-function updateScreenTime(){
+    document.getElementById('days').innerHTML = days
+    document.getElementById('hours').innerHTML = hours
+    document.getElementById('minutes').innerHTML = minutes
+    document.getElementById('seconds').innerHTML = seconds
+}, 1000);
 
-    document.querySelectorAll('.box').forEach(e=>{
-
-        const bottomTxt = e.querySelector('.card.bottom p'), value = time[e.id]+1;
-        if(value == bottomTxt.innerText)return;
-
-        const front = e.querySelector('.card.front'), frontTxt = front.querySelector('p');
-        const topTxt = e.querySelector('.card.top p');
-
-        topTxt.innerText = value - 1, 
-        frontTxt.innerText = value, 
-        bottomTxt.innerText = value;
-
-        turnAnimation(front, value, frontTxt, 0.5);
-    });
-};
-
-// Função para mostrar o contador na tela
-function turnAnimation(local, value, txt, duration){
-    local.style.animation = '', txt.classList = '';
-    setTimeout(()=> local.style.animation = `turn ${duration}s forwards`, 30);
-    setTimeout(()=> {txt.innerText = value-1, txt.classList = 'flip'}, (duration*1000)/3);
-}
