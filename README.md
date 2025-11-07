@@ -16,7 +16,6 @@ Construir um cronômetro de contagem regressiva e fazê-lo parecer o mais próxi
 - **Layout Responsivo:** Visualize o layout ideal para o site, dependendo do tamanho da tela do dispositivo;
 - **Interação dos elementos:** Veja os estados de foco para todos os elementos interativos na página;
 - **Cronômetro:** Veja um cronômetro de contagem regressiva ao vivo que diminui a cada segundo;
----
 
 ## 💼 Tecnologias utilizadas
 
@@ -24,7 +23,6 @@ Construir um cronômetro de contagem regressiva e fazê-lo parecer o mais próxi
 - CSS;
 - JavaScript;
 
----
 ## 🙋🏻‍♂️ Autor
 
 Bruno Oliveira
