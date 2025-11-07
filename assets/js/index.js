@@ -1,4 +1,4 @@
-const countDate = new Date("dez 31, 2026 00:00:00").getTime();
+const countDate = new Date("2026-12-31T00:00:00").getTime();
 
 let x = setInterval(()=> {
     const today = new Date().getTime();
